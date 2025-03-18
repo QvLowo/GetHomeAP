@@ -20,6 +20,9 @@ public class RedisConfig {
         redisTemplate.setHashKeySerializer(new StringRedisSerializer());
 //        redis 連結lettuce工廠
         redisTemplate.setConnectionFactory(lettuceConnectionFactory);
+//        多個redis指令包成一個transaction，失敗全部rollback
+        redisTemplate.setEnableTransactionSupport(true);
+        redisTemplate.afterPropertiesSet();
         return redisTemplate;
     }
 }
