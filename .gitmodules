@@ -1,0 +1,3 @@
+[submodule "GetHome_Frontend"]
+	path = GetHome_Frontend
+	url = https://github.com/QvLowo/GetHome_Frontend.git
